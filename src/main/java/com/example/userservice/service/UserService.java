@@ -5,9 +5,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.example.userservice.dto.LoginRequestDto;
 import com.example.userservice.dto.SignUpRequestDto;
+import com.example.userservice.dto.UserInfoDto;
 import com.example.userservice.entity.Address;
-import com.example.userservice.jwt.JwtUtil;
 import com.example.userservice.entity.User;
+import com.example.userservice.jwt.JwtUtil;
 import com.example.userservice.repository.UserRepository;
 
 import lombok.RequiredArgsConstructor;
@@ -40,9 +41,15 @@ public class UserService {
                 .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
 
         if (!passwordEncoder.matches(requestDto.getPassword(), user.getPassword())) {
-            throw new IllegalArgumentException("비밀번호가 일치하지 않습니다.");
+            throw new IllegalArgumentException("이메일 및 비밀번호가 일치하지 않습니다.");
         }
 
         return jwtUtil.createToken(user.getEmail());
+    }
+    
+    public UserInfoDto getUserInfoByEmail(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
+        return new UserInfoDto(user);
     }
 }
