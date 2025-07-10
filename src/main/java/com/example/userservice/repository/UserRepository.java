@@ -7,5 +7,7 @@ import com.example.userservice.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 	
-	Optional<User> findByEmail(String email);
+	Optional<User> findById(String id);
+	void deleteById(String id);
+	boolean existsById(String id);
 }

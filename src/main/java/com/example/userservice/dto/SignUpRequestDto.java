@@ -1,10 +1,16 @@
 package com.example.userservice.dto;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 
-@Data
+@Getter
+@NoArgsConstructor
+@AllArgsConstructor
 public class SignUpRequestDto {
+    @NotBlank
+    private String id;
     @NotBlank
     private String email;
     @NotBlank

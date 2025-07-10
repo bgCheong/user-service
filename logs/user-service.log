@@ -1,0 +1,3 @@
+2025-07-10 15:51:16.745 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - request_data : com.example.userservice.dto.SignUpRequestDto@3a503a37
+2025-07-10 17:57:42.097 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg4354
+2025-07-10 18:01:14.010 [http-nio-8082-exec-5] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg4354

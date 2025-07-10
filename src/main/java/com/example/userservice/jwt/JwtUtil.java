@@ -13,18 +13,46 @@ import java.util.Date;
 @Component
 public class JwtUtil {
     private final Key key;
-    private final long tokenValidityInMilliseconds;
+    private final long accesstokenValidityInMilliseconds;
+    private final long refreshtokenValidityInMilliseconds;
 
     public JwtUtil(@Value("${jwt.secret}") String secretKey,
-                   @Value("${jwt.token-validity-in-seconds}") long tokenValidityInSeconds) {
+                   @Value("${jwt.access-token-validity-in-seconds}") long accesstokenValidityInSeconds,
+                   @Value("${jwt.refresh-token-validity-in-seconds}") long refreshtokenValidityInMilliseconds) {
         byte[] keyBytes = Base64.getDecoder().decode(secretKey);
         this.key = Keys.hmacShaKeyFor(keyBytes);
-        this.tokenValidityInMilliseconds = tokenValidityInSeconds * 1000;
+        this.accesstokenValidityInMilliseconds = accesstokenValidityInSeconds * 1000;
+        this.refreshtokenValidityInMilliseconds = refreshtokenValidityInMilliseconds * 1000;
+    }
+    
+    public String createAccessToken(String id) {
+        return createToken(id, this.accesstokenValidityInMilliseconds);
     }
 
-    public String createToken(String username) {
+    public String createRefreshToken(String id) {
+        return createToken(id, this.refreshtokenValidityInMilliseconds);
+    }
+    
+    // 토큰 유효성 검증
+    public boolean validateToken(String token) {
+        try {
+            Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(token);
+            return true;
+        } catch (Exception e) {
+            // MalformedJwtException, ExpiredJwtException 등
+            return false;
+        }
+    }
+
+    // 토큰에서 이메일 정보 추출
+    public String getIdFromToken(String token) {
+        return Jwts.parserBuilder().setSigningKey(key).build()
+                .parseClaimsJws(token).getBody().getSubject();
+    }
+
+    public String createToken(String username , long validationSeconds) {
         Date now = new Date();
-        Date validity = new Date(now.getTime() + this.tokenValidityInMilliseconds);
+        Date validity = new Date(now.getTime() + validationSeconds);
 
         return Jwts.builder()
                 .setSubject(username)

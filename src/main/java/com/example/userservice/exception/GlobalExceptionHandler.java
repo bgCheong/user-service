@@ -19,4 +19,6 @@ public class GlobalExceptionHandler {
         // 400 Bad Request 상태 코드와 함께 에러 메시지를 JSON 형태로 반환
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
     }
+    
+
 }

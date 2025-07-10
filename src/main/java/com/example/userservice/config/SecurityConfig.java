@@ -26,7 +26,7 @@ public class SecurityConfig {
             // HTTP 요청에 대한 접근 권한 설정
             .authorizeHttpRequests(authz -> authz
             	    // "/users/signup"과 "/users/login" 경로 허용
-            	    .requestMatchers("/users/signup", "/users/login").permitAll()
+            	    .requestMatchers("/**").permitAll()
             	    .anyRequest().authenticated()
             );
         return http.build();
