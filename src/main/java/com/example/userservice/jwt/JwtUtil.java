@@ -1,14 +1,17 @@
 package com.example.userservice.jwt;
 
-import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
+import java.security.Key;
+import java.time.Instant;
+import java.time.temporal.ChronoUnit;
+import java.util.Base64;
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-import java.security.Key;
-import java.util.Base64;
-import java.util.Date;
+import io.jsonwebtoken.Jwts;
+import io.jsonwebtoken.SignatureAlgorithm;
+import io.jsonwebtoken.security.Keys;
 
 @Component
 public class JwtUtil {
@@ -18,11 +21,11 @@ public class JwtUtil {
 
     public JwtUtil(@Value("${jwt.secret}") String secretKey,
                    @Value("${jwt.access-token-validity-in-seconds}") long accesstokenValidityInSeconds,
-                   @Value("${jwt.refresh-token-validity-in-seconds}") long refreshtokenValidityInMilliseconds) {
+                   @Value("${jwt.refresh-token-validity-in-seconds}") long refreshtokenValidityInSeconds) {
         byte[] keyBytes = Base64.getDecoder().decode(secretKey);
         this.key = Keys.hmacShaKeyFor(keyBytes);
-        this.accesstokenValidityInMilliseconds = accesstokenValidityInSeconds * 1000;
-        this.refreshtokenValidityInMilliseconds = refreshtokenValidityInMilliseconds * 1000;
+        this.accesstokenValidityInMilliseconds = accesstokenValidityInSeconds;
+        this.refreshtokenValidityInMilliseconds = refreshtokenValidityInSeconds;
     }
     
     public String createAccessToken(String id) {
@@ -51,13 +54,15 @@ public class JwtUtil {
     }
 
     public String createToken(String username , long validationSeconds) {
-        Date now = new Date();
-        Date validity = new Date(now.getTime() + validationSeconds);
+//        Date now = new Date();
+//        Date validity = new Date(now.getTime() + validationSeconds);
+    	
+    	Instant now = Instant.now();
 
         return Jwts.builder()
                 .setSubject(username)
-                .setIssuedAt(now)
-                .setExpiration(validity)
+                .setIssuedAt(Date.from(now))
+                .setExpiration(Date.from(now.plus(validationSeconds , ChronoUnit.SECONDS)))
                 .signWith(key, SignatureAlgorithm.HS256)
                 .compact();
     }

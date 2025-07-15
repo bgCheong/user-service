@@ -4,6 +4,7 @@ import java.util.Map;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -64,11 +65,18 @@ public class UserController {
         return ResponseEntity.ok(userInfo);
     }
     
-    @PostMapping("/duplicate")
+    @GetMapping("/duplicate")
     public ResponseEntity<Map<String, Boolean>> duplicate(@RequestParam("id") String id)
     {
     	boolean dupleChk = userService.duplicatedIdCheck(id);
         return ResponseEntity.ok(Map.of("success", dupleChk));
+    }
+    
+    @DeleteMapping("/delete")
+    public ResponseEntity<String> delete(@RequestHeader("X-User-Id") String id)
+    {
+    	userService.deleteId(id);
+        return ResponseEntity.ok("회원탈퇴처리 되었습니다.");
     }
     
     

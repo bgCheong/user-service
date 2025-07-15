@@ -1,0 +1,11 @@
+2025-07-11 12:54:43.660 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg4354
+2025-07-11 13:02:19.370 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:03:22.827 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:03:26.558 [http-nio-8082-exec-4] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:03:49.015 [http-nio-8082-exec-5] INFO  c.e.userservice.service.UserService - request_data : com.example.userservice.dto.SignUpRequestDto@728d88df
+2025-07-11 13:04:06.095 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:04:10.946 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:04:44.753 [http-nio-8082-exec-8] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:04:46.560 [http-nio-8082-exec-9] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:04:48.324 [http-nio-8082-exec-10] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
+2025-07-11 13:05:07.788 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg

@@ -59,6 +59,7 @@ public class UserService {
     
     public boolean duplicatedIdCheck(String id)
     {
+    	logger.info("중복확인 ID : {}" , id);
     	return redisTemplate.opsForSet().isMember(UserGroupKey , id);
     }
     
@@ -120,7 +121,7 @@ public class UserService {
     }
     
     @Transactional
-    public void deleteId(@RequestHeader("X-User-Id") String id)
+    public void deleteId(String id)
     {
     	if (!userRepository.existsById(id)) {
             throw new IllegalArgumentException("ID '" + id + "'에 해당하는 사용자를 찾을 수 없습니다.");
