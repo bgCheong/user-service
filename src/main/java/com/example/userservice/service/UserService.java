@@ -13,12 +13,11 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.bind.annotation.RequestHeader;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.userservice.dto.LoginRequestDto;
 import com.example.userservice.dto.SignUpRequestDto;
 import com.example.userservice.dto.UserInfoDto;
+import com.example.userservice.dto.UserUpdateDto;
 import com.example.userservice.entity.Address;
 import com.example.userservice.entity.User;
 import com.example.userservice.jwt.JwtUtil;
@@ -107,7 +106,7 @@ public class UserService {
     	return jwtUtil.createAccessToken(id);
     }
     
-    public void logout(@RequestHeader("X-User-Id") String id)
+    public void logout(String id)
     {
     	logger.info("로그아웃 대상 id : {}" , id);
     	
@@ -118,6 +117,32 @@ public class UserService {
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
         return new UserInfoDto(user);
+    }
+    
+    @Transactional
+    public UserInfoDto UpdateUserInfoById(String id , UserUpdateDto updateDto )
+    {
+    	
+    	logger.info("회원정보 수정 id : {}" , id);
+    	
+    	User user = userRepository.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("사용자를 찾을 수 없습니다."));
+    	
+    	user.setEmail(updateDto.getEmail());
+    	user.setName(updateDto.getName());
+    	user.setPhoneNumber(updateDto.getPhoneNumber());
+    	Address address = new Address();
+    	address.setZipcode(updateDto.getZipcode());
+    	address.setStreetAddress(updateDto.getStreetAddress());
+    	address.setDetailAddress(updateDto.getDetailAddress());
+    	user.setAddress(address);
+    	
+    	userRepository.save(user);
+    	
+    	logger.info("회원정보 완료 id : {}" , id);
+    	
+    	return new UserInfoDto(user);
+    
     }
     
     @Transactional

@@ -1,11 +1,21 @@
-2025-07-12 09:46:41.164 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg4354
-2025-07-12 10:06:18.494 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg4354
-2025-07-12 10:22:33.099 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg4354
-2025-07-12 10:22:38.323 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
-2025-07-12 10:22:56.541 [http-nio-8082-exec-8] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
-2025-07-12 10:23:05.940 [http-nio-8082-exec-10] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
-2025-07-12 10:23:29.163 [http-nio-8082-exec-9] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
-2025-07-12 10:24:24.267 [http-nio-8082-exec-5] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : jbg
-2025-07-12 10:34:26.702 [http-nio-8082-exec-10] INFO  c.e.userservice.service.UserService - 중복확인 ID : jbg
-2025-07-12 11:06:49.064 [http-nio-8082-exec-2] INFO  c.e.userservice.service.UserService - 중복확인 ID : test
-2025-07-12 11:07:03.711 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - request_data : com.example.userservice.dto.SignUpRequestDto@76f764e0
+2025-07-20 11:09:11.202 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:09:11.225 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:12:48.314 [http-nio-8082-exec-10] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:12:48.319 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:19.988 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:19.988 [http-nio-8082-exec-2] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:42.780 [http-nio-8082-exec-5] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:42.780 [http-nio-8082-exec-4] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:53.434 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:30:53.434 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:31:10.210 [http-nio-8082-exec-9] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:31:10.210 [http-nio-8082-exec-8] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:31:18.030 [http-nio-8082-exec-10] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:31:18.030 [http-nio-8082-exec-1] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:39:52.008 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
+2025-07-20 11:39:52.049 [http-nio-8082-exec-3] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test
+2025-07-20 11:40:11.436 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
+2025-07-20 11:40:11.441 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test
+2025-07-20 11:40:15.514 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:44:20.632 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
+2025-07-20 11:44:20.637 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test

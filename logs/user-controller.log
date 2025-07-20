@@ -1,3 +1,18 @@
-2025-07-12 09:46:41.160 [http-nio-8082-exec-3] INFO  c.e.u.controller.UserController - id : jbg4354
-2025-07-12 10:06:18.493 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - id : jbg4354
-2025-07-12 10:24:24.267 [http-nio-8082-exec-5] INFO  c.e.u.controller.UserController - id : jbg
+2025-07-20 11:09:11.196 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:09:11.225 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:12:48.314 [http-nio-8082-exec-10] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:12:48.318 [http-nio-8082-exec-1] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:19.987 [http-nio-8082-exec-3] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:19.987 [http-nio-8082-exec-2] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:42.780 [http-nio-8082-exec-5] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:42.780 [http-nio-8082-exec-4] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:53.434 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:30:53.434 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:31:10.210 [http-nio-8082-exec-9] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:31:10.210 [http-nio-8082-exec-8] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:31:18.030 [http-nio-8082-exec-10] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:31:18.030 [http-nio-8082-exec-1] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:39:51.985 [http-nio-8082-exec-3] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
+2025-07-20 11:40:11.435 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
+2025-07-20 11:40:15.514 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:44:20.630 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
