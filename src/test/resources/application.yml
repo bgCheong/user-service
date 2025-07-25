@@ -8,3 +8,10 @@ spring:
   jpa:
     hibernate:
       ddl-auto: create-drop 
+
+jwt:
+  secret: V293aG9hbnNbamVvbmduYWUgY2hhbmdlIHNpbXNpbWhhZGEK # Base64 인코딩된 문자열
+   # Access Token 유효기간 (1시간)
+  access-token-validity-in-seconds: 3600
+  # Refresh Token 유효기간 (7일)
+  refresh-token-validity-in-seconds: 604800
