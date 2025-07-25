@@ -35,6 +35,7 @@ ARG UID=1001
 ARG GID=1001
 RUN groupadd --gid ${GID} ${USERNAME}
 RUN useradd --uid ${UID} --gid ${GID} -m ${USERNAME}
+RUN mkdir -p /var/log/user-service && chown -R ${USERNAME}:${USERNAME} /var/log/user-service
 
 # 작업 디렉토리 설정
 WORKDIR /app
