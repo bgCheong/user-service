@@ -30,7 +30,7 @@ RUN ./gradlew build --no-daemon
 FROM eclipse-temurin:17-jre-jammy
 
 # non-root 사용자 생성 (보안 강화)
-ARG USERNAME=cartservice
+ARG USERNAME=userservice
 ARG UID=1001
 ARG GID=1001
 RUN groupadd --gid ${GID} ${USERNAME}
