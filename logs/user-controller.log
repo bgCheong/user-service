@@ -16,3 +16,6 @@
 2025-07-20 11:40:11.435 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
 2025-07-20 11:40:15.514 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - id : test
 2025-07-20 11:44:20.630 [http-nio-8082-exec-7] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
+2025-07-20 11:47:29.048 [http-nio-8082-exec-2] INFO  c.e.u.controller.UserController - id : test
+2025-07-20 11:48:06.285 [http-nio-8082-exec-4] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test
+2025-07-20 11:48:12.052 [http-nio-8082-exec-6] INFO  c.e.u.controller.UserController - 회원정보 수정 controller id : test

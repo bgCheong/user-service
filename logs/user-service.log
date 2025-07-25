@@ -19,3 +19,8 @@
 2025-07-20 11:40:15.514 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
 2025-07-20 11:44:20.632 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
 2025-07-20 11:44:20.637 [http-nio-8082-exec-7] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test
+2025-07-20 11:47:29.048 [http-nio-8082-exec-2] INFO  c.e.userservice.service.UserService - 로그아웃 대상 id : test
+2025-07-20 11:48:06.286 [http-nio-8082-exec-4] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
+2025-07-20 11:48:06.308 [http-nio-8082-exec-4] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test
+2025-07-20 11:48:12.053 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 회원정보 수정 id : test
+2025-07-20 11:48:12.060 [http-nio-8082-exec-6] INFO  c.e.userservice.service.UserService - 회원정보 완료 id : test
