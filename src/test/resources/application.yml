@@ -4,6 +4,9 @@ spring:
     driver-class-name: org.h2.Driver
     username: sa
     password:
+  cloud:
+    config:
+      enabled: false
 
   jpa:
     hibernate:
@@ -15,3 +18,7 @@ jwt:
   access-token-validity-in-seconds: 3600
   # Refresh Token 유효기간 (7일)
   refresh-token-validity-in-seconds: 604800
+
+eureka:
+  client:
+    enabled: false
